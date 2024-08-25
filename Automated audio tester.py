@@ -38,7 +38,7 @@ def process_files_in_sample_folders(sample_path):
                     audio_file = os.path.join(folder_path, file)
                     output_csv = os.path.join(folder_path, 'output.csv')
                     
-                    cmd = ["/usr/bin/python3", DFQUERY_PATH, "-u", "209.15.246.75:5555", "-f", audio_file, "-o", "0", "-n", "1000", "-s", "-c"]
+                    cmd = ["/usr/bin/python3", DFQUERY_PATH, "-u", "IP", "-f", audio_file, "-o", "0", "-n", "1000", "-s", "-c"]
                     with open(output_csv, 'w') as f:
                         subprocess.run(cmd, stdout=f, check=True)
                     
